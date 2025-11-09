@@ -1,24 +1,14 @@
 import mongoose from "mongoose";
 
-const profileSchema = new mongoose.Schema(
+const projectSchema = new mongoose.Schema(
   {
-    name: { type: String, required: true },
-    bio: String,
-    avatar: String,
-    location: String,
-    email: String,
-    phoneNo: Number,
-    resumeUrl: String,
-    socialLinks: {
-      gitHub: String,
-      linkedIn: String,
-      portfolio: String,
-    },
-    skills: [String],
+    title: { type: String, required: true },
+    description: String,
+    techStack: [String],
+    gitHubLink: String,
+    liveLink: String,
   },
-  {
-    timestamps: true,
-  }
+  { timestamps: true }
 );
 
-export default mongoose.model("Profile", profileSchema);
+export default mongoose.model("Project", projectSchema);

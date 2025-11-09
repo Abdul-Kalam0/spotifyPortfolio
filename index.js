@@ -3,10 +3,6 @@ import cors from "cors";
 import dotenv from "dotenv";
 dotenv.config();
 
-import dbInitialization from "./config/db.js";
-
-await dbInitialization(); // Initialize DB once
-
 const app = express();
 app.use(express.json());
 app.use(cors());

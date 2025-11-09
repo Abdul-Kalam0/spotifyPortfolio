@@ -1,7 +1,16 @@
-import app from "./index.js";
+import server from "./index.js";
+import dbInitialization from "./config.js/db.js";
+
+import dotenv from "dotenv";
+dotenv.config();
 
 const PORT = process.env.PORT || 3000;
 
-app.listen(PORT, () => {
-  console.log(`Server running locally on PORT ${PORT}`);
-});
+const startServer = async () => {
+  await dbInitialization();
+  server.listen(PORT, () => {
+    console.log(`Sever listening on PORT ${PORT}`);
+  });
+};
+
+startServer();

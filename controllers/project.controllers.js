@@ -26,7 +26,6 @@ const getProjects = async (req, res) => {
       count: projects.length,
       projects,
     });
-    res.status(200).json({ message: "Projects fetched successfully" });
   } catch (error) {
     res.status(500).json({
       message: "Internal Server Error",
