@@ -230,10 +230,10 @@ const callback = async (req, res) => {
     res.status(200).send(
       `<h1>Login Successfull.</h1>
      <h2>You can visit following routes </h2>
-     <h4>GET: https://spotify-portfolio-steel.vercel.app/spotify/top-tracks </h4>
-     <h4>GET: https://spotify-portfolio-steel.vercel.app/spotify/currently-playing</h4>
-     <h4>POST: https://spotify-portfolio-steel.vercel.app/spotify/play-track/uri</h4>
-     <h4>GET: https://spotify-portfolio-steel.vercel.app/spotify/pause-current-song </h4>``<h4>GET: https://spotify-portfolio-steel.vercel.app/spotify/artists </h4>`
+     <h4>GET: https://abdul-spotify-portfolio-001.vercel.app/spotify/top-tracks </h4>
+     <h4>GET: https://abdul-spotify-portfolio-001.vercel.app/spotify/currently-playing</h4>
+     <h4>POST: https://abdul-spotify-portfolio-001.vercel.app/spotify/play-track/uri</h4>
+     <h4>GET: https://abdul-spotify-portfolio-001.vercel.app/spotify/pause-current-song </h4>``<h4>GET: https://abdul-spotify-portfolio-001.vercel.app/spotify/artists </h4>`
     );
   } catch (error) {
     res
