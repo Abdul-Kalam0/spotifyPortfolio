@@ -3,35 +3,33 @@ import cors from "cors";
 import dotenv from "dotenv";
 dotenv.config();
 
+import dbInitialization from "./config/db.js";
+
+await dbInitialization(); // Initialize DB once
+
 const app = express();
 app.use(express.json());
-
-// Allow requests from React app
 app.use(cors());
 
+// Routes
 import profileRoutes from "./routes/profile.routes.js";
 import projectRouters from "./routes/project.routes.js";
 import spotifyRoutes from "./routes/spotify.routes.js";
 
-//portfolio routes
 app.use("/users", profileRoutes);
 app.use("/projects", projectRouters);
-
-//spotify
 app.use("/spotify", spotifyRoutes);
 
 app.get("/", (req, res) => {
-  return res.send(
-    `
-      <div>
-        <h1>Welcome to Abdul Kalam's Portfolio Backend APIs</h1>
-        <p>Access my Spotify API integration below:</p>
-        <a href="https://spotify-portfolio-steel.vercel.app/spotify/auth/login" target="_blank">
-          https://spotify-portfolio-steel.vercel.app/spotify/auth/login
-        </a>
-      </div>
-    `
-  );
+  res.send(`
+    <div>
+      <h1>Welcome to Abdul Kalam's Portfolio Backend APIs</h1>
+      <p>Access my Spotify API integration below:</p>
+      <a href="/spotify/auth/login" target="_blank">
+        /spotify/auth/login
+      </a>
+    </div>
+  `);
 });
 
 export default app;
