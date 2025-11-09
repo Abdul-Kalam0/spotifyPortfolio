@@ -26,8 +26,8 @@ app.get("/", (req, res) => {
       <div>
         <h1>Welcome to Abdul Kalam's Portfolio Backend APIs</h1>
         <p>Access my Spotify API integration below:</p>
-        <a href="https://abdul-portfolio-backend-eac01.vercel.app/spotify/auth/login" target="_blank">
-          https://abdul-portfolio-backend-eac01.vercel.app/spotify/auth/login
+        <a href="https://spotify-portfolio-steel.vercel.app/spotify/auth/login" target="_blank">
+          https://spotify-portfolio-steel.vercel.app/spotify/auth/login
         </a>
       </div>
     `
